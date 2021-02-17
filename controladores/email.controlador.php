@@ -10,8 +10,8 @@ class EmailController {
     date_default_timezone_set("America/Mexico_City");
     $mail = new PHPMailer;
     $mail->isMail();
-    $mail->setFrom('ministeriovive@hotmail.com', 'Ministerio Vive A.C');
-    $mail->addReplyTo('ministeriovive@hotmail.com', 'Ministerio Vive A.C');
+    $mail->setFrom('marcygarcia@outlook.com', 'Ministerio Vive A.C');
+    $mail->addReplyTo('marcygarcia@outlook.com', 'Ministerio Vive A.C');
     $mail->Subject = "Subject goes here";
     $mail->addAddress($_POST["infoEmail"]);
     $mail->msgHTML('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
