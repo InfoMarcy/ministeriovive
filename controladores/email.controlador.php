@@ -94,20 +94,7 @@ class EmailController {
         });
         ;</script>'; 
     }
-} else {
-    echo '<script> swal({
-        icon:"error",
-        text: "Incidencia al enviar su formulario, favor de intentar nuevamente más tarde.",
-        button: true,
-        button: "Cerrar"
-    }).then(function(result){
-        if(result.value){
-        window.location = "'.$ruta.'inicio#contactenos"
-        }
-    });
-    ;</script>'; 
 }
-
 
 }
 }
