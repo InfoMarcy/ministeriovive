@@ -12,30 +12,30 @@ FOOTER
 
 				<p class="lead text-white text-center text-lg-left">CONTÁCTENOS</p>
 				
-				<form method="post" onsubmit="return validarContactenos()">
+				<form method="post">
 
 					<div class="form-group">
 					
-						<input type="text"  name="nombreContactenos" id="nombreContactenos" class="form-control form-control-lg" placeholder="Nombre" required>
+						<input type="text"  name="infoNombre" id="infoNombre" class="form-control form-control-lg" placeholder="Nombre" required>
 
 					</div>
 
 					<div class="form-group">
 						
-						<input type="email" name="emailContactenos"  id="emailContactenos" class="form-control form-control-lg" placeholder="Correo electrónico" required>
+						<input type="email" name="infoEmail"  id="infoEmail" class="form-control form-control-lg" placeholder="Correo electrónico" required>
 					</div>
 
 					<div class="form-group">
 						
-						<textarea  name="mensajeContactenos" id="mensajeContactenos"  class="form-control form-control-lg" rows="3" placeholder="Escribe aquí tu mensaje" required></textarea>
+						<textarea  name="infoMensaje" id="infoMensaje"  class="form-control form-control-lg" rows="3" placeholder="Escribe aquí tu mensaje" required></textarea>
 
 					</div>
 
 					<input type="submit" value="Enviar" class="btn btn-info btn-block btn-lg" >
 
 					<?php 
-							 $contactenos = new ControladorPlantilla();
-							 $contactenos -> ctrFormularioContactenos();
+							 $contactenos = new EmailController();
+							 $contactenos -> ctrEnviar();
 					?>
 
 
